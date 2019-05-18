@@ -8,6 +8,9 @@
     version:        "{{ java_webapp_version }}"
     dest:           "{{ java_webapp_dir }}/{{ java_webapp_artifact_id }}.{{ java_webapp_extension }}"
     setype:         "{{ java_webapp_setype }}"
+    mode:           "{{ java_webapp_mode }}"
+    owner:          "{{ java_webapp_owner }}"
+    group:          "{{ java_webapp_group }}"
 
 - name: "Wait for tomcat to deploy application"
   pause:
