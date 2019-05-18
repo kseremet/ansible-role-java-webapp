@@ -7,6 +7,7 @@
     repository_url: "{{ java_webapp_repository_url }}"
     version:        "{{ java_webapp_version }}"
     dest:           "{{ java_webapp_dir }}/{{ java_webapp_artifact_id }}.{{ java_webapp_extension }}"
+    setype:         "{{ java_webapp_setype }}"
 
 - name: "Wait for tomcat to deploy application"
   pause:
