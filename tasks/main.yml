@@ -1,4 +1,9 @@
 ---
+- name: "Delete existing artifact on the server"
+  file:
+    path: "{{ java_webapp_dir }}/{{ java_webapp_artifact_id }}.{{ java_webapp_extension }}"
+    state: absent
+    
 - name: "Deploy maven artifact"
   maven_artifact:
     group_id:       "{{ java_webapp_group_id }}"
